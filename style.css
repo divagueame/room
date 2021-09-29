@@ -10,6 +10,49 @@
 body {
   
 }
+.header {
+
+}
+
+.mobileHeader{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 1000vh;
+  min-width: 100%;
+}
+
+.whiteBarHeader{
+  height: 110px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+.close-cross {
+  padding-right: 5.12rem;
+}
+.close-cross {
+  background-image: url('./images/icon-close.svg');
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.menu {
+  width: 100%;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu > div {
+  /* background-color: lightblue; */
+  font-size: 14px;
+  color: hsl(0, 0%, 27%);
+}
+
 .slider-wrap {
   display: flex;
   flex-direction: column;
