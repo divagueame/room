@@ -8,17 +8,19 @@
   box-sizing: border-box;
   
 }
-body {
-  /* background-color: rgb(28, 141, 135); */
-  }
 
+.open-header {
+  position: relative;
+  /* display: none; */
+  z-index: 3;
+    
+}
 .logo-wrapper {
   position: absolute;
   display: flex;
   justify-content: center;
   /* margin: auto; */
   width: 100%;
-  /* background-color: rgba(240, 128, 128, 0.377); */
 }
 .logo-img {
   /* position: absolute; */
@@ -28,21 +30,6 @@ body {
   height: 16px;
   margin-top: 25px;
   
-}
-.mobileHeader{
-  position: fixed;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  height: 1000vh;
-  min-width: 100%;
-}
-
-.whiteBarHeader{
-  height: 110px;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  padding: 25px;
-  align-items: center;
-  display: none;
 }
 
 .open-menu-btn {
@@ -54,33 +41,42 @@ body {
   margin: 25px;
   position: absolute;
 }
+
+
+.mobileHeader{
+  position: fixed;
+  height: 1000vh;
+  min-width: 100%;
+  z-index: 8;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.whiteBarHeader{
+  height: 110px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  padding: 25px;
+  align-items: center;
+  /* display: none; */
+}
+
+
 .open-menu-wrap {
   background-color: lightcoral;
   height: 110px;
   width: 100%;
   padding: 25px;
-  
-  /* align-items: center; */
-  /* display: none; */
 }
 
 .open-menu-logo {
-  
-  
-  /* padding: 25px; */
   margin-top: 25px;
 color: rgba(160, 192, 45, 0.527);
   background-image: url('./images/logo.svg');
   background-repeat: no-repeat;
-  /* background-size: contain; */
-
   height: 116px;
-  /* width: 100%; */
-
-  /* display: block; */
   margin-left: auto;
   margin-right: auto;
-  /* width: 40%; */
 }
 
 .close-cross {
