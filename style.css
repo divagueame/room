@@ -14,15 +14,23 @@ html, body {
 .open-header {
   position: relative;
   /* display: none; */
-  z-index: 3;
+  z-index: 3; 
+  /* background-color: blue; */
+  
     
 }
+.closed-header{
+  position: relative;
+  /* z-index: -2 */
+}
+
 .logo-wrapper {
   position: absolute;
   display: flex;
   justify-content: center;
   /* margin: auto; */
   width: 100%;
+  /* background-color: rgb(77, 102, 102); */
 }
 .logo-img {
   /* position: absolute; */
@@ -31,27 +39,44 @@ html, body {
   margin-right: auto;
   height: 16px;
   margin-top: 25px;
+  /* background-color: ; */
   
 }
-
-.open-menu-btn {
-  padding-right: 5.12rem;
-  background-image: url('./images/icon-hamburger.svg');
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  margin: 25px;
+.burger {
   position: absolute;
+  /* background-color: hsl(0, 37%, 53%); */
+  margin-top: 25px;
+  margin-left: 20px;
 }
 
+.blackbg{
+  /* display: none; */
+  position: fixed;
+  height: 1000vh;
+  min-width: 100%;
+  /* z-index: 1; */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* top:-999vh */
+}
 
+.blackbgHidden {
+  background-color: rgba(0, 0, 0, 0);
+}
 .mobileHeader{
   position: fixed;
   height: 1000vh;
   min-width: 100%;
   z-index: 8;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  /* top:-22px; */
+  /* display: none; */
+  /* transition: top 1000ms ease-in-out; */
+}
+
+.mobileHeaderHidden {
+  top: -110px;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -2;
 }
 
 .whiteBarHeader{
@@ -105,7 +130,7 @@ color: rgba(160, 192, 45, 0.527);
 .slider-wrap {
   display: flex;
   flex-direction: column;
-  
+  position: relative;
 }
 
 .left-slider {
@@ -113,7 +138,6 @@ color: rgba(160, 192, 45, 0.527);
 }
 
 .left-img1-mobile, .left-img2-mobile, .left-img3-mobile {
-
   height: 370px;
   /* background-color: lime; */
   background-size:  cover;
@@ -230,9 +254,9 @@ color: rgba(160, 192, 45, 0.527);
 }
 
 .bottom-info-card {
-  /* background-color: rebeccapurple; */
-  padding-top: 30px;
-  padding-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
 }
 .bottom-info-title {
   text-transform: uppercase;
