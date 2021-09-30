@@ -109,14 +109,13 @@ color: rgba(160, 192, 45, 0.527);
 .left-slider {
   position: relative;
 }
-/* .left-img1, .left-img2, .left-img3{} */
+
 .left-img1-mobile, .left-img2-mobile, .left-img3-mobile {
-  
+
   height: 370px;
   /* background-color: lime; */
   background-size:  cover;
   background-repeat: no-repeat;
-  /* background-position: top left; */
 }
 .left-img1-mobile{
   background-image: url('./images/mobile-image-hero-1.jpg');
@@ -147,15 +146,8 @@ color: rgba(160, 192, 45, 0.527);
   height: 56px;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  /* padding: 19px; */
-  /* top: 10%; */
-  /* top: 56px; */
-  /* bottom: 313px; */
   bottom: 0;
-  /* top: 370px; */
   right: 0;
-  
   background-color: black
 }
 .slider-controls-left, .slider-controls-right {
@@ -170,25 +162,67 @@ color: rgba(160, 192, 45, 0.527);
 .slider-controls-right {
   background-image: url('./images/icon-angle-right.svg');
 }
+.slider-controls-left-wrapper, .slider-controls-right-wrapper{
+  padding: 20px;
+}
 
-
+.slider-controls-left-wrapper:hover, .slider-controls-right-wrapper:hover {
+  background-color: hsl(0, 0%, 63%)
+  
+}
 .card-title {
   font-size: 27px;
   font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 1.3rem;
+  
 }
 
 
+.card-shop-btn {
+  margin-top: 2rem;
+  display: flex
+}
 .card-shop-btn-text {
   text-transform: uppercase;
+  letter-spacing: .8rem;
+  font-weight: 600;
+  padding-right: 3rem;
 }
 
-.card {
-  padding: 25px
+.card-shop-btn-arrow {
+  background-image: url('./images/icon-arrow.svg');
+  width: 40px;
+  height: 18px;
+  color: hsl(0, 0%, 27%);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
+.card, .bottom-info-card {
+  padding: 25px;
+  /* margin-top: 20px; */
+}
+.card-text, .bottom-info-text  {
+  line-height: 150%;
+  color: hsl(0, 0%, 63%)
+}
+
 .card1 {
   display: default;
 }
 .card2, .card3 {
   display: none;
 }
+
+.bottom-info-wrap {
+  background-color: beige;
+}
+.bottom-info-title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.bottom-info-text{}
+
+
 @media only screen and (min-width:769px) {}
