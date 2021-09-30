@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
-
+html, body {
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -215,14 +217,37 @@ color: rgba(160, 192, 45, 0.527);
   display: none;
 }
 
+/* BOTTOM PART */
+
 .bottom-info-wrap {
-  background-color: beige;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-dark-img,.about-light-img{
+  min-width: 100%
+}
+
+.bottom-info-card {
+  /* background-color: rebeccapurple; */
+  padding-top: 30px;
+  padding-top: 30px;
 }
 .bottom-info-title {
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: .5rem;
+  padding-bottom: 20px;
 }
-.bottom-info-text{}
 
+.bottom-img1 {
+  background-image: url('./images/image-about-dark.jpg');
+}
+
+
+.bottom-img2 {
+  background-image: url('./images/image-about-light.jpg');
+}
 
 @media only screen and (min-width:769px) {}
