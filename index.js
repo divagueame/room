@@ -3,34 +3,50 @@ const mobileHeader = document.querySelector(".mobileHeader")
 const closeCross = document.querySelector(".close-cross-wrap")
 
 burgerBtn.addEventListener('click', function(){ 
-  console.log("Should open")
-  
   mobileHeader.classList.toggle("displayNone");
-
-  // setTimeout(() => {
-  //   mobileHeader.classList.toggle("displayNone");  
-  // }, 600);
 })
 
 
 closeCross.addEventListener('click', function(){
-  
   mobileHeader.classList.toggle("displayNone");
 })
 
 
 
 //SLIDER
-const leftBtn = document.querySelector(".slider-controls-left-wrapper")
-const rightBtn = document.querySelector(".slider-controls-right-wrapper")
+const leftBtn =  document.querySelector(".leftControlWrapper")
+const rightBtn = document.querySelector(".rightControlWrapper")
+const images = document.querySelectorAll(".slideImg")
+
+let currentPosition = 0
+let imgElements = images.length
+
+leftBtn.addEventListener('click',function(){
+  if(currentPosition<imgElements-1){
+    moveLeft(images[currentPosition])
+    moveCenter(images[currentPosition+1])
+    currentPosition++
+
+  }
+})
+
+rightBtn.addEventListener('click',function(){
+  if(currentPosition>=1){
+    moveRight(images[currentPosition])
+    moveCenter(images[currentPosition-1])
+    currentPosition--
+  }
+})
 
 
-leftBtn.addEventListener('click', moveLeft)
-rightBtn.addEventListener('click', moveRight)
-
-function moveLeft(){
-  console.log("SHould move left")
+function moveLeft(img){
+  img.style.left = "-100%"
 }
-function moveRight(){
-  console.log("SHould move rigt")
+
+function moveRight(img){
+  img.style.left = "100%"
+}
+
+function moveCenter(img){
+  img.style.left ="0"
 }
