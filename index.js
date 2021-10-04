@@ -18,22 +18,25 @@ const leftBtn =  document.querySelector(".leftControlWrapper")
 const rightBtn = document.querySelector(".rightControlWrapper")
 const images = document.querySelectorAll(".slideImg")
 
+
 let currentPosition = 0
 let imgElements = images.length
 
-leftBtn.addEventListener('click',function(){
+rightBtn.addEventListener('click',function(){
   if(currentPosition<imgElements-1){
     moveLeft(images[currentPosition])
     moveCenter(images[currentPosition+1])
+    changeCardRight(currentPosition)
     currentPosition++
 
   }
 })
 
-rightBtn.addEventListener('click',function(){
+leftBtn.addEventListener('click',function(){
   if(currentPosition>=1){
     moveRight(images[currentPosition])
     moveCenter(images[currentPosition-1])
+    changeCardLeft(currentPosition)
     currentPosition--
   }
 })
@@ -49,4 +52,36 @@ function moveRight(img){
 
 function moveCenter(img){
   img.style.left ="0"
+}
+
+function changeCardRight(current){
+  // console.log(current+1)
+  const cards = document.querySelectorAll(".card")
+  cards.forEach(function(card,index){
+    
+    if(index-1==current){
+      card.style.display = 'block'
+    }else{
+      card.style.display = 'none'
+    }
+  })
+}
+
+
+function changeCardLeft(current){
+  // console.log(current+1)
+  const cards = document.querySelectorAll(".card")
+  cards.forEach(function(card,index){
+    
+    if(index+1==current){
+      card.style.display = 'block'
+      // console.log(card,index, current)
+        
+      
+      
+    }else{
+      
+      card.style.display = 'none'
+    }
+  })
 }

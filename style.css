@@ -19,6 +19,14 @@ html, body {
  a:hover {
   border-bottom: 4px solid rgb(255, 255, 255);
  }
+
+ .contactContainer {
+   /* position: absolute; */
+   background-color: rgba(126, 255, 51, 0.2);
+   width: 100vw;
+   /* height: 100vh; */
+   /* z-index: 33333 */
+ }
 .open-header {
   position: relative;
   z-index: 13;     
@@ -136,6 +144,7 @@ html, body {
   margin-top: 2rem;
   display: flex
 }
+
 .card-shop-btn-text {
   text-transform: uppercase;
   letter-spacing: .8rem;
@@ -365,6 +374,25 @@ html, body {
   font-size: 3rem;
 }
 
+.card-shop-btn {
+  width: 17vw;
+}
+.card-shop-btn:hover{
+  cursor: pointer;
+}
+.card-shop-btn-arrow-wrapper:hover{
+  /* background-color: rgb(113, 177, 31); */
+  color: aquamarine;
+  
+}
+.card-shop-btn-text:hover, .card-shop-btn-arrow-wrapper:hover{
+  
+  cursor: pointer;
+}
+
+
+
+
 
 .displayNone {
   display: block;
@@ -378,7 +406,8 @@ html, body {
 
 
 .open-header {
-  z-index: 10;     
+  z-index: 10;   
+  background-color: antiquewhite;  
 }
 
 .logo-wrapper {
@@ -389,28 +418,29 @@ html, body {
 }
 .logo-img {
   display: block;
-  margin-left: auto;
+  margin-left: 8vh;
   margin-right: auto;
   height: 16px;
-  margin-top: 25px;
+  margin-top: 8vh;
+
 }
 
 
 
 .mobileHeader{
   position: absolute;
-  height: 3vh;
-  width: 20px;
+  height: 0vh;
+  width: 0px;
   min-width: 0px;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(230, 21, 21, 0.897);
   background-color: none;
 }
 .whiteBarHeader{
   height: 110px;
   background-color: rgba(36, 18, 18, 0.0);
   display: flex;
-  padding: 25px;
+  padding: 0px;
   align-items: center;
   /* display: none; */
 }
@@ -430,12 +460,15 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  
+  margin-top: 5vh;
+  margin-left: 25vh;
 }
 .menu > a {
+
   color: rgb(255, 255, 255);
   font-weight: 400px;
   padding: 2rem;
+  box-sizing:initial !important;
 }
 
 
